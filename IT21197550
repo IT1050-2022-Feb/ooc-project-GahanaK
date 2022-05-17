@@ -1,0 +1,122 @@
+//Definition of booking class
+class Booking : public Reservation{
+	protected:
+		string BID;
+		
+	public:
+		Booking();
+		Booking(string bno);
+		void displayBooking();
+		~Booking();
+};
+
+//Default Constructor
+Booking::Booking()
+{
+	strcpy(BID, "");
+}
+
+//Constructor with Parameters
+Booking::Booking(string bno)
+{
+	strcpy(BID, bno); 	
+} 
+
+//Definition of Customer Class
+class Customer{
+	private:
+		string CID;
+		string name;
+		string address;
+		string DOB;
+		int mobile;
+		string email;
+		
+	public:
+		Customer();
+		Customer(string cno, string cName, string cAddress, string CDOB, int cMobile, string cEmail);
+		void displayDetails();
+		void editProfile();
+		void makePayment();
+		~Customer;
+};
+
+//Default Constructor
+Customer::Customer()
+{
+	strcpy(CID, "");
+	strcpy(name, "");
+	strcpy(address, "");
+	strcpy(DOB, "");
+	mobile = 0;
+	strcpy(email, "");
+	
+}
+
+//Constructor with Parameters
+Customer::Customer(string cno, string cName, string cAddress, string CDOB, int cMobile, string cEmail)
+{
+	strcpy(CID, cno);
+	strcpy(name, cName);
+	strcpy(address, cAddress);
+	strcpy(DOB, CBOD);
+	mobile = cMoile;
+	strcpy(email, cEmail);
+}
+
+//client program
+#include<iostream>
+#include<cstring>
+#define SIZE 10
+
+#include "Booking.h"
+#include "Card.h"
+#include "Customer.h"
+#include "Employee.h"
+#include "Feedback.h"
+#include "Manager.h"
+#include "Package.h"
+#include "Payment.h"
+#include "Reservation.h"
+#include "SeasonalOffer.h"
+#include "TourGuide.h"
+
+using namespace std;
+
+int main()
+{
+	Booking B1;
+	Booking B2("B001");
+	
+	Card C1;
+	Card C2("C1234", "Debit", "Nimal", "18/11/2025");
+	
+	Customer RC1;
+	Customer RC2("RC001", "Nimal", "Kandy", "10/01/2002", 0763654545, "nimal@gmial.com");
+	
+	Employee E1;
+	Employee E2("E001", "Chathura", 0778965412 , 5);
+	
+	Feedback F1;
+	Feedback F2(F001);
+	
+	Manager M1;
+	Manager M2("M001", "Dimeth", 0778546123);
+	
+	Package PK1;
+	Package PK2("PK001");
+	
+	Payment P1;
+	Payment P2("P001", 10000.00, "10/05/2022");
+	
+	Reservation R1;
+	Reservation R2("R001", "Booking", 10000.00);
+	
+	Offer O1;
+	Offer O2("O001")
+	
+	TourGuide T1;
+	TourGuide T2("T001", "Sunil", 0774561232)
+	
+	return 0;
+}
