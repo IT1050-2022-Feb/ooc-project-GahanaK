@@ -1,0 +1,70 @@
+//Definition of Manager Class
+class Manager{
+	private:
+		string MID;
+		string name;
+		int mobile
+		
+	public:
+		Manager();
+		Manager(string mno, sting mName, int mContact);
+		void displayManager();
+		void calculateEmployeePerformance();
+		~Manager();
+};
+
+//Default Constructor
+Manager::Manager()
+{
+	strcpy(MID, "");
+	strcpy(name, "");
+	mobile = 0;	
+}
+
+//Constructor with Parameters
+Manager::Manager(string mno, sting mName, int mContact)
+{
+	strcpy(MID, mno);
+	strcpy(name, mName);
+	mobile = mContact;
+}
+
+//Definition of Offer class
+class Offer : public Reservation{
+	protected:
+		string OID;
+		
+	public:
+		Offer();
+		Offer(ono);
+		void displayOffer();
+		~Offer();
+};
+
+/Default Constructor
+Offer::Offer()
+{
+	strcpy(OID, "");
+}
+
+//Constructor with parameters
+Offer::Offer(ono)
+{
+	strcpy(OID, ono);
+}
+
+//Default Constructor
+Reservation::Reservation()
+{
+	strcpy(type, "");
+	strcpy(location, "");
+	price = 0.00;
+}
+
+//Constructor with parameters
+Reservation::Reservation(string rType, string rLoc, float price)
+{
+	strcpy(type, rType);
+	strcpy(location, rLoc);
+	price = 0.00;
+}
