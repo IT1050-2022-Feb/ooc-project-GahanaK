@@ -1,0 +1,60 @@
+ //Definition of Feedback Class
+class Feedback{
+	private:
+		string FID;
+		
+	public:
+		Feedback();
+		Feedback(string fno);
+		void displayFeedback();
+		void replyFeedback();
+		void viewFeedback();
+		~Feedback();
+};
+ //Default Constructor
+Feedback::Feedback()
+{
+	strcpy(FID, "");
+}
+
+//Constructor with Parameters
+Feedback::Feedback(string fno)
+{
+	strcpy(FID, fno);
+}
+ //Definition of Package class
+class Package: public Reservation{
+	protected:
+		string PKID;
+		
+	public:
+		Package();
+		Package(string pno);
+		void displayPackage();
+		~Package();
+};
+ //Default Constructor
+Package::Package()
+{
+	strcpy(PKID, "");
+}
+
+//Constructor with Parameters
+Package::Package()
+{
+	strcpy(PKID, pno);
+}
+//Definition of Reservation Class
+class Reservation{
+	protected:
+		string type;
+		string location;
+		float price;
+		
+	public:
+		Reservation();
+		Reservation(string rType, string rLoc, float price);
+		void makeReservation();
+		void updateReservation();
+		~Reservation();
+}
