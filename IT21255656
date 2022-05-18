@@ -1,0 +1,50 @@
+//Definition of Card class
+class Card : public Payment{
+	protected:
+		int cardno;
+		string type;
+		string holdername;
+    string expirydate;
+		
+	public:
+		Card();
+		Card(int card, string cType, string chName, string expdate);
+		void displayCard();
+	  ~Card();
+};
+
+
+
+//Definition of TourGuide Class
+class TourGuide{
+	private:
+		string TID;
+		string name;
+		int mobile;
+		
+	public:
+		TourGuide();
+		TourGuide(string tno, string tname, int tMobile);
+		void viewRequest();
+		~TourGuide();
+};
+
+
+
+//Default Constructors
+TourGuide::TourGuide()
+{
+	strcpy(TID, "");
+	strcpy(name, "");
+	mobile = 0;
+}
+
+
+
+//Constructors with parameters
+TourGuide:: TourGuide(string tno, string tname, int tMobile)
+{
+	strcpy(TID, tno);
+	strcpy(name, tname);
+	mobile = tMobile;
+}
