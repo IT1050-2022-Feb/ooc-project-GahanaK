@@ -1,0 +1,65 @@
+//Definition of Employee Class
+class Employee{
+	private:
+		string EID;
+		string name;
+		int mobile;
+		int evaluationscore;
+		
+	public:
+		Employee();
+		Employee(string eno, string eName, int mno, int score);
+		void displayEmpDetails();
+		void viewReservation();
+		~Employee();
+};
+
+//Default Constructor
+Employee::Employee()
+{
+	strcpy(EID, "");
+	strcpy(name, "");
+	mobile = 0;
+	evaluationscore = 0;
+}
+
+//Constructor with parameters
+Employee::Employee(string eno, string eName, int mno, int score)
+{
+	strcpy(EID, eno);
+	strcpy(name, eName);
+	mobile = mno;
+	evaluationscore = score;
+}
+
+//Defiition of Payment class
+class Payment{
+	protected :
+		string PID;
+		float amount;
+		string date;
+	public:
+		Payment();
+		Payment(string pno, float amt, string pDate);
+		void displayPayments();
+		void validPayment();
+		void display payment();
+		~Payment();
+};
+
+//Default Constructor
+Payment:: Payment()
+{
+	strcpy(PID, "");
+	amount = 0.00;
+	strcpy(date, "");
+}
+
+//Constructors with Parameters
+Payment:: Payment
+{
+	strcpy(PID, pno);
+	amount = amt
+	strcpy(date, pDate);
+}
+
